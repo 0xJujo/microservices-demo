@@ -9,7 +9,7 @@ import (
     "time"
 
     _ "github.com/lib/pq"
-    pb "github.com/GoogleCloudPlatform/microservices-demo/src/checkoutservice/genproto/hipstershop"
+    pb "main/genproto"
 )
 
 var db *sql.DB
