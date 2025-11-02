@@ -55,7 +55,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "8080"
@@ -141,7 +141,7 @@ spec:
             value: "postgres"
           - name: ENABLE_TRACING
             value: "1"
-          - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          - name: COLLECTOR_SERVICE_ADDR
             value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: POSTGRES_PORT
             value: "5432"
@@ -247,7 +247,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "8080"
@@ -337,7 +337,7 @@ spec:
           env:
           - name: ENABLE_TRACING
             value: "1"
-          - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          - name: COLLECTOR_SERVICE_ADDR
             value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: PORT
             value: "8080"
@@ -452,7 +452,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "50051"
@@ -529,7 +529,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "3550"
@@ -606,7 +606,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: REDIS_ADDR
           value: "redis-cart:6379"
@@ -786,7 +786,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -845,7 +845,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "7000"
@@ -921,7 +921,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "50051"
@@ -999,7 +999,7 @@ spec:
         env:
         - name: ENABLE_TRACING
           value: "1"
-        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: COLLECTOR_SERVICE_ADDR
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "9555"
