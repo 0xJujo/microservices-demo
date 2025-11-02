@@ -53,6 +53,10 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "emailservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=emailservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -139,6 +143,10 @@ spec:
           env:
           - name: POSTGRES_HOST
             value: "postgres"
+          - name: OTEL_SERVICE_NAME
+            value: "checkoutservice"
+          - name: OTEL_RESOURCE_ATTRIBUTES
+            value: "service.name=checkoutservice"
           - name: ENABLE_TRACING
             value: "1"
           - name: COLLECTOR_SERVICE_ADDR
@@ -245,6 +253,10 @@ spec:
           grpc:
             port: 8080
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "recommendationservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=recommendationservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -335,6 +347,10 @@ spec:
               - name: "Cookie"
                 value: "shop_session-id=x-liveness-probe"
           env:
+          - name: OTEL_SERVICE_NAME
+            value: "frontend"
+          - name: OTEL_RESOURCE_ATTRIBUTES
+            value: "service.name=frontend"
           - name: ENABLE_TRACING
             value: "1"
           - name: COLLECTOR_SERVICE_ADDR
@@ -450,6 +466,10 @@ spec:
         ports:
         - containerPort: 50051
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "paymentservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=paymentservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -527,6 +547,10 @@ spec:
         ports:
         - containerPort: 3550
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "productcatalogservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=productcatalogservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -604,6 +628,10 @@ spec:
         ports:
         - containerPort: 7070
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "cartservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=cartservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -784,6 +812,10 @@ spec:
           readOnlyRootFilesystem: true
         image: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator:v0.10.3
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "loadgenerator"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=loadgenerator"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -843,6 +875,10 @@ spec:
         - name: grpc
           containerPort: 7000
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "currencyservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=currencyservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -919,6 +955,10 @@ spec:
         ports:
         - containerPort: 50051
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "shippingservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=shippingservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
@@ -997,6 +1037,10 @@ spec:
         ports:
         - containerPort: 9555
         env:
+        - name: OTEL_SERVICE_NAME
+          value: "adservice"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=adservice"
         - name: ENABLE_TRACING
           value: "1"
         - name: COLLECTOR_SERVICE_ADDR
