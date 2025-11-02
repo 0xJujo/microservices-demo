@@ -53,6 +53,8 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "8080"
         - name: DISABLE_PROFILER
@@ -135,6 +137,8 @@ spec:
           env:
           - name: POSTGRES_HOST
             value: "postgres"
+          - name: OTEL_EXPORTER_OTLP_ENDPOINT
+            value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: POSTGRES_PORT
             value: "5432"
           - name: POSTGRES_USER
@@ -237,6 +241,8 @@ spec:
           grpc:
             port: 8080
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "8080"
         - name: PRODUCT_CATALOG_SERVICE_ADDR
@@ -323,6 +329,8 @@ spec:
               - name: "Cookie"
                 value: "shop_session-id=x-liveness-probe"
           env:
+          - name: OTEL_EXPORTER_OTLP_ENDPOINT
+            value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: PORT
             value: "8080"
           - name: PRODUCT_CATALOG_SERVICE_ADDR
@@ -434,6 +442,8 @@ spec:
         ports:
         - containerPort: 50051
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "50051"
         - name: DISABLE_PROFILER
@@ -507,6 +517,8 @@ spec:
         ports:
         - containerPort: 3550
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "3550"
         - name: DISABLE_PROFILER
@@ -580,6 +592,8 @@ spec:
         ports:
         - containerPort: 7070
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: REDIS_ADDR
           value: "redis-cart:6379"
         resources:
@@ -756,6 +770,8 @@ spec:
           readOnlyRootFilesystem: true
         image: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator:v0.10.3
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: FRONTEND_ADDR
           value: "frontend:80"
         - name: USERS
@@ -811,6 +827,8 @@ spec:
         - name: grpc
           containerPort: 7000
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "7000"
         - name: DISABLE_PROFILER
@@ -883,6 +901,8 @@ spec:
         ports:
         - containerPort: 50051
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "50051"
         - name: DISABLE_PROFILER
@@ -957,6 +977,8 @@ spec:
         ports:
         - containerPort: 9555
         env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "9555"
         resources:
