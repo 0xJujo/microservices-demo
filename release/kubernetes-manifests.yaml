@@ -53,6 +53,8 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
@@ -137,6 +139,8 @@ spec:
           env:
           - name: POSTGRES_HOST
             value: "postgres"
+          - name: ENABLE_TRACING
+            value: "1"
           - name: OTEL_EXPORTER_OTLP_ENDPOINT
             value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: POSTGRES_PORT
@@ -241,6 +245,8 @@ spec:
           grpc:
             port: 8080
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
@@ -329,6 +335,8 @@ spec:
               - name: "Cookie"
                 value: "shop_session-id=x-liveness-probe"
           env:
+          - name: ENABLE_TRACING
+            value: "1"
           - name: OTEL_EXPORTER_OTLP_ENDPOINT
             value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: PORT
@@ -442,6 +450,8 @@ spec:
         ports:
         - containerPort: 50051
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
@@ -517,6 +527,8 @@ spec:
         ports:
         - containerPort: 3550
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
@@ -592,6 +604,8 @@ spec:
         ports:
         - containerPort: 7070
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: REDIS_ADDR
@@ -770,6 +784,8 @@ spec:
           readOnlyRootFilesystem: true
         image: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator:v0.10.3
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: FRONTEND_ADDR
@@ -827,6 +843,8 @@ spec:
         - name: grpc
           containerPort: 7000
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
@@ -901,6 +919,8 @@ spec:
         ports:
         - containerPort: 50051
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
@@ -977,6 +997,8 @@ spec:
         ports:
         - containerPort: 9555
         env:
+        - name: ENABLE_TRACING
+          value: "1"
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
           value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
