@@ -59,8 +59,8 @@ spec:
           value: "service.name=emailservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "8080"
         - name: DISABLE_PROFILER
@@ -149,8 +149,8 @@ spec:
             value: "service.name=checkoutservice"
           - name: ENABLE_TRACING
             value: "1"
-          - name: COLLECTOR_SERVICE_ADDR
-            value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+          - name: OTEL_EXPORTER_OTLP_ENDPOINT
+            value: "signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: POSTGRES_PORT
             value: "5432"
           - name: POSTGRES_USER
@@ -259,8 +259,8 @@ spec:
           value: "service.name=recommendationservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "8080"
         - name: PRODUCT_CATALOG_SERVICE_ADDR
@@ -353,8 +353,8 @@ spec:
             value: "service.name=frontend"
           - name: ENABLE_TRACING
             value: "1"
-          - name: COLLECTOR_SERVICE_ADDR
-            value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+          - name: OTEL_EXPORTER_OTLP_ENDPOINT
+            value: "signoz-otel-collector.platform.svc.cluster.local:4317"
           - name: PORT
             value: "8080"
           - name: PRODUCT_CATALOG_SERVICE_ADDR
@@ -472,8 +472,8 @@ spec:
           value: "service.name=paymentservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "50051"
         - name: DISABLE_PROFILER
@@ -553,8 +553,8 @@ spec:
           value: "service.name=productcatalogservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "3550"
         - name: DISABLE_PROFILER
@@ -634,8 +634,8 @@ spec:
           value: "service.name=cartservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: REDIS_ADDR
           value: "redis-cart:6379"
         resources:
@@ -818,8 +818,8 @@ spec:
           value: "service.name=loadgenerator"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: FRONTEND_ADDR
           value: "frontend:80"
         - name: USERS
@@ -881,8 +881,8 @@ spec:
           value: "service.name=currencyservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "7000"
         - name: DISABLE_PROFILER
@@ -961,8 +961,8 @@ spec:
           value: "service.name=shippingservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "50051"
         - name: DISABLE_PROFILER
@@ -1043,8 +1043,8 @@ spec:
           value: "service.name=adservice"
         - name: ENABLE_TRACING
           value: "1"
-        - name: COLLECTOR_SERVICE_ADDR
-          value: "http://signoz-otel-collector.platform.svc.cluster.local:4317"
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: "signoz-otel-collector.platform.svc.cluster.local:4317"
         - name: PORT
           value: "9555"
         resources:
