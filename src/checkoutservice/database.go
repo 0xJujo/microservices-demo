@@ -96,8 +96,3 @@ func getEnv(key, fallback string) string {
     }
     return fallback
 }
-```
-
-Update `src/checkoutservice/go.mod`, add this line after the existing dependencies:
-```
-	github.com/lib/pq v1.10.9
