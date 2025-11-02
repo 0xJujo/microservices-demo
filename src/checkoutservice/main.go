@@ -122,6 +122,10 @@ func main() {
 
 	log.Infof("service config: %+v", svc)
 
+	if err := initDB(); err != nil {
+    	log.Printf("Warning: Database initialization failed: %v", err)
+	}
+
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%s", port))
 	if err != nil {
 		log.Fatal(err)
@@ -275,6 +279,11 @@ func (cs *checkoutService) PlaceOrder(ctx context.Context, req *pb.PlaceOrderReq
 		log.Infof("order confirmation email sent to %q", req.Email)
 	}
 	resp := &pb.PlaceOrderResponse{Order: orderResult}
+	// Save order to database
+	err = saveOrder(orderID.String(), req.UserId, req.UserCurrency, prep.cartItems, req.Address, prep.shippingCostLocalized, &total)
+	if err != nil {
+		log.Printf("Warning: Failed to save order to database: %v", err)
+	}
 	return resp, nil
 }
 
